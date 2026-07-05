@@ -112,7 +112,7 @@
     <div class="main-container">
         <div class="header">
     <h1>SWISS JOURNEY</h1>
-    <img src="{{ asset('swiss.jpg') }}" alt="Pemandangan Swiss" style="width: 100%; max-width: 600px;">
+    <img src="{{ asset('gunung_alpen.jpg') }}" alt="Pemandangan Swiss" style="width: 100%; max-width: 600px;">
 </div>
             
             <div class="content">
