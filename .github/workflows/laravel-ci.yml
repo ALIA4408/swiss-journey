@@ -33,3 +33,18 @@ jobs:
 
       - name: Run Tests
         run: php artisan test
+
+  deploy:
+    needs: laravel-tests # Hanya jalan kalau CI sukses
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hubungkan ke Server & Tukar Folder
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.IP_SERVER }}
+          username: ${{ secrets.USERNAME_SERVER }}
+          key: ${{ secrets.KUNCI_SSH }}
+          script: |
+            cd /var/www/swiss-journey
+            git pull origin main       # Robot ambil kode gambar baru
+            php artisan config:cache   # Bersihkan cache di server

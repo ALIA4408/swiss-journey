@@ -110,10 +110,9 @@
     </div>
 
     <div class="main-container">
-        <div class="header">
-    <h1>SWISS JOURNEY</h1>
-    <img src="{{ asset('gunung_alpen.jpg') }}" alt="Pemandangan Swiss" style="width: 100%; max-width: 600px;">
-</div>
+        <div class="card">
+            <!-- Menggunakan foto asli Gunung Matterhorn, Swiss dari Unsplash -->
+            <img class="hero-image" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80" alt="Pegunungan Alpen Swiss">
             
             <div class="content">
                 <span class="badge">Destinasi Populer</span>
